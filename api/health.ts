@@ -3,7 +3,7 @@ export default function handler(req: any, res: any) {
   return res.status(200).json({
     status: "ok",
     service: "veyra-api",
-    version: "0.3.0",
+    version: "1.0.0",
     product: "Veyra Business Intelligence OS",
     timestamp: new Date().toISOString(),
   });
