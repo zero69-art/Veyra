@@ -1,10 +1,8 @@
-import { bodyOf, requireApiKey } from "../lib/http";
-import { ingestMetric, listSeries } from "../lib/core";
+import { bodyOf, requireApiKey } from "./lib/http";
+import { ingestMetric, listSeries } from "./lib/core";
 
 export default function handler(req: any, res: any) {
-  if (req.method === "GET") {
-    return res.status(200).json({ metrics: listSeries() });
-  }
+  if (req.method === "GET") return res.status(200).json({ metrics: listSeries() });
   if (req.method === "POST") {
     if (!requireApiKey(req, res)) return;
     try {

@@ -1,5 +1,5 @@
-import { bodyOf } from "../lib/http";
-import { listAlerts, updateAlert } from "../lib/core";
+import { bodyOf } from "./lib/http";
+import { listAlerts, updateAlert } from "./lib/core";
 
 export default function handler(req: any, res: any) {
   if (req.method === "GET") {
