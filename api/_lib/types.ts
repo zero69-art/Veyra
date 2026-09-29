@@ -10,3 +10,4 @@ export interface Alert { id: string; organizationId: string; severity: Severity;
 export interface BriefItem { kind: "insight" | "risk" | "opportunity" | "anomaly" | "movement"; text: string; severity?: Severity; }
 export interface DailyBrief { organizationId: string; generatedAt: string; headline: string; items: BriefItem[]; attention: string[]; metrics: { name: string; value: string; change: string; positive: boolean }[]; }
 export interface ForecastOutcome { id: string; runId: string; predicted: number; observed?: number; error?: number; evaluatedAt?: string; }
+export const VEYRA_TYPES = 1;
