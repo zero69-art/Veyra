@@ -1,5 +1,5 @@
 import { bodyOf, requireApiKey } from "../lib/http";
-import { runIntelligence } from "../lib/store";
+import { runIntelligence } from "../lib/core";
 
 export default function handler(req: any, res: any) {
   if (req.method !== "POST") return res.status(405).json({ error: "method_not_allowed" });

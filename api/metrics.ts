@@ -1,5 +1,5 @@
 import { bodyOf, requireApiKey } from "../lib/http";
-import { ingestMetric, listSeries } from "../lib/store";
+import { ingestMetric, listSeries } from "../lib/core";
 
 export default function handler(req: any, res: any) {
   if (req.method === "GET") {
